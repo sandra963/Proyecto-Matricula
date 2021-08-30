@@ -4,11 +4,14 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { InfGeneralComponent } from './pages/inf-general/inf-general.component';
+import { BuscarVacantesComponent } from './pages/buscar-vacantes/buscar-vacantes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InfGeneralComponent
+    InfGeneralComponent,
+    BuscarVacantesComponent,
+  
   ],
   imports: [
     BrowserModule,
