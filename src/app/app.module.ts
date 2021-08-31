@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InfGeneralComponent } from './pages/inf-general/inf-general.component';
 import { MatriculaEnLineaComponent } from './pages/matricula-en-linea/matricula-en-linea.component';
+import { ContactenosComponent } from './pages/contactenos/contactenos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InfGeneralComponent,
-    MatriculaEnLineaComponent
+    MatriculaEnLineaComponent,
+    ContactenosComponent
   ],
   imports: [
     BrowserModule,
