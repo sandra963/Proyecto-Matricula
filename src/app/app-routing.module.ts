@@ -10,7 +10,7 @@ import { MatriculaEnLineaComponent } from "./pages/matricula-en-linea/matricula-
 const routes: Routes=[
  {path:'infGeneral', component:InfGeneralComponent},
  {path:'MatriculaEnLinea', component:MatriculaEnLineaComponent},
- {path:'MatriculaEnLineaConfirmacion', component:MatriculaEnLineaConfirmacionComponent}
+ {path:'MatriculaEnLineaConfirmacion', component:MatriculaEnLineaConfirmacionComponent},
  {path: '', redirectTo: 'infGeneral', pathMatch: 'full' }
 ];
 
