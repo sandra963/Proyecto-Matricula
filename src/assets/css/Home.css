@@ -1,0 +1,13 @@
+nav{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+   
+}
+    li.nav-item:hover{
+        border-bottom: 4px solid rgb(182, 173, 179);
+        font-size: 120%;
+        transition: 2s;
+        -webkit-transition: all 0.20s linear;
+       
+    }
+
