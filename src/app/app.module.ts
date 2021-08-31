@@ -5,13 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InfGeneralComponent } from './pages/inf-general/inf-general.component';
 import { BuscarVacantesComponent } from './pages/buscar-vacantes/buscar-vacantes.component';
+import { AlumnosComponent } from './pages/alumnos/alumnos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InfGeneralComponent,
     BuscarVacantesComponent,
-  
+    BuscarVacantesComponent,
   ],
   imports: [
     BrowserModule,
