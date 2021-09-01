@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contactenos',
@@ -9,11 +9,11 @@ import { FormBuilder } from '@angular/forms';
 export class ContactenosComponent implements OnInit {
 
   contactenosForm = this.fb.group({
-    Motivo: [''],
-    Nombre: [''],
-    Numero: [''],
-    Correo: [''],
-    Mensaje: ['']
+    Motivo: ['',Validators.required],
+    Nombre: ['',Validators.required],
+    Numero: ['',Validators.required],
+    Correo: ['',[Validators.required,Validators.email]],
+    Mensaje: ['',Validators.required]
   });
 
   constructor(private fb: FormBuilder) { }
