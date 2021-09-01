@@ -6,7 +6,7 @@ import { BuscarVacantesComponent } from "./pages/buscar-vacantes/buscar-vacantes
 import { InfGeneralComponent } from "./pages/inf-general/inf-general.component";
 import { MatriculaEnLineaConfirmacionComponent } from "./pages/matricula-en-linea-confirmacion/matricula-en-linea-confirmacion.component";
 import { MatriculaEnLineaComponent } from "./pages/matricula-en-linea/matricula-en-linea.component";
-
+import { ActualizaralumnoComponent } from "./pages/actualizaralumno/actualizaralumno.component";
 
 
 const routes: Routes=[
@@ -15,6 +15,7 @@ const routes: Routes=[
  {path:'MatriculaEnLineaConfirmacion', component:MatriculaEnLineaConfirmacionComponent},
  {path:'BuscarVacantes', component:BuscarVacantesComponent},
  {path:'alumnos', component:AlumnosComponent},
+ {path:'actualizaralumnos/:id', component:ActualizaralumnoComponent},
  {path: '', redirectTo: 'infGeneral', pathMatch: 'full' }
  
 ];
