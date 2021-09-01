@@ -7,7 +7,7 @@ import { InfGeneralComponent } from "./pages/inf-general/inf-general.component";
 import { MatriculaEnLineaConfirmacionComponent } from "./pages/matricula-en-linea-confirmacion/matricula-en-linea-confirmacion.component";
 import { MatriculaEnLineaComponent } from "./pages/matricula-en-linea/matricula-en-linea.component";
 import { ActualizaralumnoComponent } from "./pages/actualizaralumno/actualizaralumno.component";
-
+import { LoginComponent } from "./pages/login/login.component";
 
 const routes: Routes=[
  {path:'infGeneral', component:InfGeneralComponent},
@@ -16,6 +16,7 @@ const routes: Routes=[
  {path:'BuscarVacantes', component:BuscarVacantesComponent},
  {path:'alumnos', component:AlumnosComponent},
  {path:'actualizaralumnos/:id', component:ActualizaralumnoComponent},
+ {path:'login', component:LoginComponent},
  {path: '', redirectTo: 'infGeneral', pathMatch: 'full' }
  
 ];
