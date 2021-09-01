@@ -8,6 +8,8 @@ import { MatriculaEnLineaComponent } from './pages/matricula-en-linea/matricula-
 import { MatriculaEnLineaConfirmacionComponent } from './pages/matricula-en-linea-confirmacion/matricula-en-linea-confirmacion.component';
 import { BuscarVacantesComponent } from './pages/buscar-vacantes/buscar-vacantes.component';
 import { AlumnosComponent } from './pages/alumnos/alumnos.component';
+import { ContactenosComponent } from './pages/contactenos/contactenos.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,12 +19,14 @@ import { AlumnosComponent } from './pages/alumnos/alumnos.component';
     MatriculaEnLineaComponent,
     MatriculaEnLineaConfirmacionComponent,
     BuscarVacantesComponent,
-    AlumnosComponent
+    AlumnosComponent,
+    ContactenosComponent
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
