@@ -12,6 +12,7 @@ import { AlumnosComponent } from './pages/alumnos/alumnos.component';
 import { ActualizaralumnoComponent } from './pages/actualizaralumno/actualizaralumno.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ContactenosComponent } from './pages/contactenos/contactenos.component';
+import { MatriculaEnLineaConsultaComponent } from './pages/matricula-en-linea-consulta/matricula-en-linea-consulta.component';
 
 
 
