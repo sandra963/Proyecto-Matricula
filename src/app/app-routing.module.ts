@@ -8,6 +8,8 @@ import { MatriculaEnLineaConfirmacionComponent } from "./pages/matricula-en-line
 import { MatriculaEnLineaComponent } from "./pages/matricula-en-linea/matricula-en-linea.component";
 import { ActualizaralumnoComponent } from "./pages/actualizaralumno/actualizaralumno.component";
 import { LoginComponent } from "./pages/login/login.component";
+import { ContactenosComponent } from "./pages/contactenos/contactenos.component";
+import { MatriculaEnLineaConsultaComponent } from "./pages/matricula-en-linea-consulta/matricula-en-linea-consulta.component";
 
 const routes: Routes=[
  {path:'infGeneral', component:InfGeneralComponent},
@@ -17,6 +19,8 @@ const routes: Routes=[
  {path:'alumnos', component:AlumnosComponent},
  {path:'actualizaralumnos/:id', component:ActualizaralumnoComponent},
  {path:'login', component:LoginComponent},
+ {path:'contactenos', component:ContactenosComponent},
+ {path:'MatriculaEnLineaConsulta', component:MatriculaEnLineaConsultaComponent},
  {path: '', redirectTo: 'infGeneral', pathMatch: 'full' }
  
 ];
