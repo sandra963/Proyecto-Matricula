@@ -1,6 +1,6 @@
 <div class="container">
 <h2>Mantenimiento de alumnos</h2> <br>
-<form [formGroup]="alumnosForm" method="post">
+<form>
   <div class="row"> 
   
     <div class="col-md-6">
@@ -56,7 +56,7 @@
       <td>{{alumno.domicilio}}</td>
       <td>{{alumno.telefono}}</td>
       <td>
-        <a routerLink="/actualizaralumnos/{{alumno.dnialumno}}" class="btn btn-sm btn-danger mr-1"><i class="bi bi-pencil-square"></i></a>
+        <a  class="btn btn-sm btn-danger mr-1"><i class="bi bi-pencil-square"></i></a>
         <button *ngIf="selectedAlumno.dnialumno !==0"
         class="btn btn-danger"
         (click)="delete()" class="btn btn-danger"><i class="bi bi-trash-fill"></i></button> 
