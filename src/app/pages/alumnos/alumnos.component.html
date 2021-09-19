@@ -1,0 +1,68 @@
+<div class="container">
+<h2>Mantenimiento de alumnos</h2> <br>
+<form>
+  <div class="row"> 
+  
+    <div class="col-md-6">
+        <div class="input-group">
+          <input type="text" class="form-control" formControlName="apellidos" placeholder="Ingrese apellidos">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                  <i class="bi bi-search"></i> 
+                 </button>
+            </div>  
+        </div>
+    </div>
+    <div class="col-md-6">
+       <div class="input-group">
+        <input type="text" class="form-control" formControlName="dnialumno" placeholder="ingrese el Nº de DNI">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="bi bi-search"></i> 
+           </button>
+        </div>
+     </div>
+  </div>
+</div>
+</form>
+<button type="submit" class="btn btn-danger my-4" (click)=__onSubmit() style="margin-left: 40%;">Buscar</button>
+<br>
+<h2>Resultado de Busqueda</h2>
+<hr>
+
+  <div class="row">
+   <table class="table">
+    <thead>
+      <tr>
+          <th style="width: 12,85%">DNI Alumno</th>
+          <th style="width: 12,85%">Nombres</th>
+          <th style="width: 12,85%">Apellido</th>
+          <th style="width: 12,85%">Nivel</th>
+          <th style="width: 12,85%">Grado</th>
+          <th style="width: 12,85%">Direccion</th>
+          <th style="width: 12,85%">Telefono</th>
+          <th style="width: 10%"></th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let alumno of alumnosArray" class="list-group-item-action"
+    (click)="openForEdit(alumno)"
+    [class.active]="alumno==selectedAlumno">
+      <td>{{alumno.dnialumno}}</td>
+      <td>{{ alumno.nombres }}</td>
+      <td>{{ alumno.apellidos }}</td>
+      <td>{{alumno.nivel}}</td>
+      <td>{{alumno.grado}}</td>
+      <td>{{alumno.domicilio}}</td>
+      <td>{{alumno.telefono}}</td>
+      <td>
+        <a  class="btn btn-sm btn-danger mr-1"><i class="bi bi-pencil-square"></i></a>
+        <button *ngIf="selectedAlumno.dnialumno !==0"
+        class="btn btn-danger"
+        (click)="delete()" class="btn btn-danger"><i class="bi bi-trash-fill"></i></button> 
+      </td>
+    </tr>
+  </tbody>
+   </table>
+  </div>
+</div>

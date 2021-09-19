@@ -1,0 +1,134 @@
+<div class="container">
+    <h2>Actualizar Datos de Alumno</h2>
+    <hr>
+<div class="row">
+ <div class="col-md-6">
+ <h3>Datos de alumno</h3>
+     <form class="form-inline" action="">
+    <div class="row mb-3">
+     <div class="col-md-4">
+     <label for="dnialumno" class="col-form-label">DNI alumno</label>
+     </div>
+    <div class="col-md-8">
+        <input type="text" id="dnialumno" class="form-control" formcontroName="" aria-describedby="dnialumnoHelpInline" required>
+    </div>
+ </div>
+
+ <div class="row mb-3">
+    <div class="col-md-4">
+    <label for="nombres" class="col-form-label">nombres</label>
+    </div>
+   <div class="col-md-8">
+       <input type="text" id="nombres" formControName="nombres" class="form-control" aria-describedby="nombresHelpInline" required>
+   </div>
+</div>
+<div class="row mb-3">
+    <div class="col-4">
+    <label for="apellidos" class="col-form-label">apellidos</label>
+    </div>
+   <div class="col-8">
+       <input type="text" id="apellidos" class="form-control" formControName="apellidos" aria-describedby="apellidosHelpInline" required>
+   </div>
+</div>
+<div class="row mb-3">
+    <div class="col-4">
+    <label for="telefonoalumnos" class="col-form-label">Telefono</label>
+    </div>
+   <div class="col-8">
+       <input type="text" id="telefonoalumnos" class="form-control" formControName="telefonoalumnos" aria-describedby="apellidosHelpInline" required>
+   </div>
+</div>
+<div class="row mb-3">
+    <div class="col-4">
+    <label for="nivel" class="col-form-label">Nivel</label>
+    </div>
+   <div class="col-8">
+       <input type="text" id="nivel" class="form-control" formControName="nivel" aria-describedby="nivelHelpInline">
+   </div>
+</div>
+<div class="row mb-3">
+    <div class="col-4">
+    <label for="grado" class="col-form-label">grado</label>
+    </div>
+   <div class="col-8">
+       <input type="text" id="grado" class="form-control" formControName="grado" aria-describedby="gradoHelpInline">
+   </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-4">
+        <label for="direccion" class="col-form-label">Direccion</label>
+        </div>
+       <div class="col-8">
+           <input type="text" id="direccion" class="form-control" formControName="direccion" aria-describedby="direccionHelpInline">
+       </div>
+        </div>
+</form>
+ </div>
+ <div class="col-md-6">
+<h3>Datos de apoderado</h3>
+<form class="form-inline" action="">
+    <div class="row mb-3">
+            <div class="col-4">
+                <label for="dniapoderado" class="col-form-label">DNI Apoderado</label>
+            </div>
+            <div class="col-8">
+                <input type="text" id="dniapoderado" class="form-control" formControName="dniapoderado" aria-describedby="dniapoderadoHelpInline">
+            </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-4">
+            <label for="nombreaporderado" class="col-form-label">Nombres</label>
+        </div>
+        <div class="col-8">
+            <input type="text" id="nombreaporderado" class="form-control" formControName="nombreaporderado" aria-describedby="nombreaporderadoHelpInline">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-4">
+            <label for="apellidoapoderado" class="col-form-label">Apellidos</label>
+        </div>
+        <div class="col-8">
+            <input type="text" id="apellidoapoderado" class="form-control" formControName="apellidoapoderado"  aria-describedby="apellidoapoderadoHelpInline">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-4">
+            <label for="direccionapoderado" class="col-form-label">Direccion</label>
+        </div>
+        <div class="col-8">
+            <input type="text" id="direccionapoderado" class="form-control"  formControName="direccionapoderado" aria-describedby="direccionHelpInline">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-4">
+            <label for="correoapoderado" class="col-form-label">Correo</label>
+        </div>
+        <div class="col-8">
+            <input type="text" id="correoapoderado" class="form-control" formControName="correoapoderado" aria-describedby="correoapoderadoHelpInline">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-4">
+            <label for="grado" class="col-form-label">Parentesco</label>
+        </div>
+        <div class="col-8">
+            <select class="form-select" size="3" aria-label="size 3 select example"  style="margin-right: 60px; width: 100%;">
+                <option selected>Padre/Madre</option>
+                <option value="1">Abuelo/Abuela</option>
+                <option value="2">Tio/Tia</option>
+                <option value="3">Hermana/Hermano</option>
+              </select> 
+        </div>
+    </div> 
+ </form>
+ </div>
+ </div>
+ <div class="row">
+    <div class="col-md-6">
+     <button type="submit" class="btn btn-danger btn-lg" (click)="addorEdit()" style="margin-left: 300px;">Actualizar</button>
+   </div>
+   <div class="col-md-6">
+     <button type="submit" class="btn btn-secondary btn-lg">Cancelar</button>
+   </div>
+</div>
+</div>
