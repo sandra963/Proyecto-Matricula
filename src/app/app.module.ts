@@ -11,7 +11,6 @@ import { BuscarVacantesComponent } from './pages/buscar-vacantes/buscar-vacantes
 import { AlumnosComponent } from './pages/alumnos/alumnos.component';
 import { ActualizaralumnoComponent } from './pages/actualizaralumno/actualizaralumno.component';
 import { LoginComponent } from './pages/login/login.component';
-
 import { AppComponent } from './app.component';
 
 @NgModule({
