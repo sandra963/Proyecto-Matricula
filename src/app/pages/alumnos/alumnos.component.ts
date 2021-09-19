@@ -48,8 +48,8 @@ if(confirm("Estas seguro de querer eliminar")){
 
   constructor(private fb:FormBuilder) { }
     __onSubmit(){
-    if(this.alumnosForm.value.nombre){
-     console.log(this.alumnosForm.value);
+    if(this.alumnosForm.value.dnialumno){
+     console.log(this.alumnosForm.value.dnialumno);
      alert('Resultado');
     }
     else{

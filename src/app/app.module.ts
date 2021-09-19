@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { AppComponent } from './app.component';
+
 import { InfGeneralComponent } from './pages/inf-general/inf-general.component';
 import { MatriculaEnLineaComponent } from './pages/matricula-en-linea/matricula-en-linea.component';
 import { MatriculaEnLineaConfirmacionComponent } from './pages/matricula-en-linea-confirmacion/matricula-en-linea-confirmacion.component';
@@ -13,12 +13,11 @@ import { ActualizaralumnoComponent } from './pages/actualizaralumno/actualizaral
 import { LoginComponent } from './pages/login/login.component';
 import { ContactenosComponent } from './pages/contactenos/contactenos.component';
 import { MatriculaEnLineaConsultaComponent } from './pages/matricula-en-linea-consulta/matricula-en-linea-consulta.component';
-
-
+import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
+  declarations:[
+   
     InfGeneralComponent,
     MatriculaEnLineaComponent,
     MatriculaEnLineaConfirmacionComponent,
@@ -26,8 +25,8 @@ import { MatriculaEnLineaConsultaComponent } from './pages/matricula-en-linea-co
     AlumnosComponent,
     ActualizaralumnoComponent,
     LoginComponent,
-    ContactenosComponent
-
+    ContactenosComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -38,4 +37,5 @@ import { MatriculaEnLineaConsultaComponent } from './pages/matricula-en-linea-co
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
+
