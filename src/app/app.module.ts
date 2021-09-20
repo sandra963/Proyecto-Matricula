@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 
 import { InfGeneralComponent } from './pages/inf-general/inf-general.component';
 import { MatriculaEnLineaComponent } from './pages/matricula-en-linea/matricula-en-linea.component';
@@ -15,9 +15,10 @@ import { ContactenosComponent } from './pages/contactenos/contactenos.component'
 import { MatriculaEnLineaConsultaComponent } from './pages/matricula-en-linea-consulta/matricula-en-linea-consulta.component';
 import { AppComponent } from './app.component';
 
+
 @NgModule({
   declarations:[
-   
+ 
     InfGeneralComponent,
     MatriculaEnLineaComponent,
     MatriculaEnLineaConfirmacionComponent,
@@ -30,9 +31,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

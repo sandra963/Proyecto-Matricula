@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 import { RecaptchaErrorParameters } from 'ng-recaptcha';
+import { VacantesService } from 'src/app/services/vacantes.service';
 
 @Component({
   selector: 'app-buscar-vacantes',
@@ -12,6 +14,8 @@ export class BuscarVacantesComponent implements OnInit {
   nivel:string='';
   Grado:string='';
 
+   vacantes=[];
+  
   public resolved(captchaResponse: string): void {
     console.log(`Captcha resuelto: ${captchaResponse}`);
     
@@ -24,9 +28,25 @@ export class BuscarVacantesComponent implements OnInit {
   }
 //Presione Mayús + Tabulación para navegar por el historial de chat.
 
-  constructor() { }
+  constructor( private readonly ps:VacantesService,
+              private ar: ActivatedRoute) { }
 
-  ngOnInit(): void {
+    _getVacantes(distritoColegio:string){
+      const param ='?distritoColegio' + distritoColegio;
+  
+
+     this.ps._getVacantes(param).subscribe((rest: any)=>{
+       this.vacantes=rest.data;
+       console.log(this.vacantes);
+     })
   }
 
-}
+  ngOnInit(): void {
+  this.ar.params.subscribe((params:Params)=>{
+  if(params.distritoColegio){
+  this._getVacantes(params.distritoColegio);
+  }
+   })
+
+   }
+ }
