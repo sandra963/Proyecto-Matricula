@@ -22,6 +22,7 @@ const routes: Routes=[
  {path:'login', component:LoginComponent},
  {path:'contactenos', component:ContactenosComponent},
  {path:'home', component:HomeComponent}, 
+ {path:'MatriculaEnLineaConsulta', component:MatriculaEnLineaConsultaComponent},
 {path: '', redirectTo: 'home', pathMatch: 'full' }
  
 ];
