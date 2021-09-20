@@ -1,9 +1,27 @@
+
 <div class="container" style="padding-top: 20px;">
-    
+  
+  
     <div class="row">
+
+      
+
         <div class="col-6">
           <h3>Aproderado</h3>
-          
+
+          <div class="col">
+            <div *ngFor="let a of documentos" class="col-sm6">
+              <p> Hola </p>
+            </div>
+          </div> 
+
+          <ul>
+            <li *ngFor="let t of documentos">
+                <span>{{t.dni}}</span>
+            </li>
+        </ul>
+                
+
           <form class="needs-validation" novalidate>
             <div class="form-row">
               <div class="col-md-4 mb-3">

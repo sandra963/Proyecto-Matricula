@@ -1,0 +1,16 @@
+{
+    "data": [
+        {
+            "dni": "46623661",
+            "name": "Sergio German",
+            "lastname": "Geldres Reategui",
+            "date": "13/02/1990"
+        },		
+		{
+            "dni": "71457292",
+            "name": "Rosse Angela",
+            "lastname": "Alvarez Idrugo",
+            "date": "08/07/1991"            
+        }
+    ]
+}

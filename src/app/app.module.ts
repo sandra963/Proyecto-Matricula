@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 
 import { InfGeneralComponent } from './pages/inf-general/inf-general.component';
@@ -21,18 +23,22 @@ import { AppComponent } from './app.component';
     InfGeneralComponent,
     MatriculaEnLineaComponent,
     MatriculaEnLineaConfirmacionComponent,
+    MatriculaEnLineaConsultaComponent,
     BuscarVacantesComponent,
     AlumnosComponent,
     ActualizaralumnoComponent,
     LoginComponent,
     ContactenosComponent,
     AppComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
