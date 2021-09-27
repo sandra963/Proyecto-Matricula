@@ -16,6 +16,8 @@ import { MatriculaEnLineaConsultaComponent } from './pages/matricula-en-linea-co
 import { AppComponent } from './app.component';
 
 
+
+
 @NgModule({
   declarations:[
  
@@ -27,7 +29,8 @@ import { AppComponent } from './app.component';
     ActualizaralumnoComponent,
     LoginComponent,
     ContactenosComponent,
-    AppComponent
+    AppComponent,
+
   ],
   imports: [
     BrowserModule,

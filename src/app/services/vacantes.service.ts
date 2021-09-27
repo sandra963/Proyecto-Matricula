@@ -7,7 +7,8 @@ import { Injectable } from '@angular/core';
 export class VacantesService {
 
   constructor(private readonly HttpClient:HttpClient) { }
-  _getVacantes(params: any){
-  return this.HttpClient.get('https://localhost:44309/api/Vacantes/GetListVacantes'+ params);
+  _getVacantes(){
+  return this.HttpClient.get('https://localhost:44309/api/Vacantes/GetListVacantes');
   }
+
 }

@@ -6,9 +6,7 @@
     </div>
     <div class="col-md-10">
       <select id="provincia" name="country">
-        <option value="lima">Lima</option>
-        <option value="cusco">Cusco</option>
-        <option value="Arequipa">Arequipa</option>
+        <option value="lima" *ngFor="let p of vacantes">{{ p.provinciaColegio }}<i class="fas fa-lightbulb-exclamation    "></i></option>
       </select>
     </div>
   </div>
@@ -18,9 +16,7 @@
     </div>
     <div class="col-md-10">
       <select id="distrito" name="country">
-        <option value="Surco">Surco</option>
-        <option value="Surquilo">Surquillo</option>
-        <option value="SanIsidro">San Isidro</option>
+        <option value="Surco" *ngFor="let p of vacantes">{{ p.distritoColegio}}</option>
       </select>
     </div>
   </div>
@@ -30,9 +26,7 @@
     </div>
     <div class="col-md-10">
       <select id="nivel" name="country">
-        <option value="inicial">Inicial</option>
-        <option value="primaria">Primaria</option>
-        <option value="secundaria">Secundaria</option>
+        <option value="inicial" *ngFor="let p of vacantes">{{ p.tipoGradoSeccion }}</option>
       </select>
     </div>
   </div>
@@ -42,9 +36,7 @@
     </div>
     <div class="col-md-10">
       <select id="grado" name="country">
-        <option value="primero">Primero</option>
-        <option value="segundo">Segundo</option>
-        <option value="tercero">Tercero</option>
+        <option value="primero" *ngFor="let p of vacantes">{{ p.grado }}</option>
       </select>
     </div>
   </div>
@@ -52,160 +44,25 @@
     <button type="button" class="btn btn-danger" id="ConsultaVacantes">Consultar Vacantes</button>
   </div>
 
-
-
   <div class="container px-4 py-5" id="icon-grid">
     <h2 class="pb-2 border-bottom">Resultado de Busqueda</h2>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-      <div class="col d-flex align-items-start">
-        <img src="./assets/img/schol.png" class="img-fluid img-thumbnail" width="40px" style="border-radius: 50%;"
-          alt="...">
-        <div>
-          <h4 class="fw-bold mb-0">I.E Alfonso Hugarte</h4>
-          <p>Vacantes disponibles:</p>
-          <!-- Button trigger modal -->
-          <div>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-              Mas Informacion
-            </button>
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Vacantes Disponibles</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
+        
+          <div class="row">
+            <div class="col-sm-6" *ngFor="let rvacantes of vacantes">
+              <div class="card">
+                <div class="card-body">
+                  <img src="./assets/img/schol.png" class="img-fluid img-thumbnail" width="40px" style="border-radius: 50%;"
+                  alt="...">
+                  <h5 class="card-title">Colegio: {{rvacantes.descripcionColegio}}</h5>
+                  <p class="card-text">Distrito: {{rvacantes.distritoColegio}}</p>
+                  <p class="card-text">Provincia: {{rvacantes.provinciaColegio}}</p>
+                  <p class="card-text">Direccion: {{rvacantes.direccionColegio}}</p>
+                  <p class="card-text">Grado: {{rvacantes.tipoGradoSeccion}}</p>
+                  <p class="card-text">Vacantes Disponibles: {{rvacantes.totalDisponibleVacante}}</p>
+                  <p class="card-text">Telefono: {{rvacantes.telefonoColegio}}</p>
                   </div>
-                  <div class="modal-body">
-                    Ubicacion del colegio:<br>
-                    Telefono:<br>
-                    Nivel:<br>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" href="#">Solicitar Matricula</button>
-                  </div>
-                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col d-flex align-items-start">
-        <img src="./assets/img/schol.png" class="img-fluid img-thumbnail" width="40px" style="border-radius: 50%;"
-          alt="...">
-        <div>
-          <h4 class="fw-bold mb-0">I.E Simon Bolivar</h4>
-          <p>Vancantes disponibles:</p>
-          <div>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-              Mas Informacion
-            </button>
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Vacantes disponibles</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    ...
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" href="MatriculaEnLinea">Solicitar Matricula</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col d-flex align-items-start">
-        <img src="./assets/img/schol.png" class="img-fluid img-thumbnail" width="40px" style="border-radius: 50%;"
-          alt="...">
-        <div>
-          <h4 class="fw-bold mb-0">I.E Tupac Amaru</h4>
-          <p>Vancantes disponibles:</p>
-          <div>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-              Mas Informacion
-            </button>
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    ...
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" href="MatriculaEnLinea">Solicitar Matricula</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <img src="./assets/img/schol.png" class="img-fluid img-thumbnail" width="40px" style="border-radius: 50%;"
-          alt="...">
-        <div>
-          <h4 class="fw-bold mb-0">I.E. Micaela Bastidas</h4>
-          <p>Vancantes Disponibles:</p>
-          <!-- Button trigger modal -->
-          <div>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-              Mas Informacion
-            </button>
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    ...
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" href="MatriculaEnLinea">Solicitar Matricula</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
+           </div>
   </div>
 </div>

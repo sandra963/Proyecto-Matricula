@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { RecaptchaErrorParameters } from 'ng-recaptcha';
 import { VacantesService } from 'src/app/services/vacantes.service';
 
+
 @Component({
+  
   selector: 'app-buscar-vacantes',
   templateUrl: './buscar-vacantes.component.html',
   styleUrls: ['./buscar-vacantes.component.css']
@@ -14,7 +16,7 @@ export class BuscarVacantesComponent implements OnInit {
   nivel:string='';
   Grado:string='';
 
-   vacantes=[];
+   vacantes:any=[];
   
   public resolved(captchaResponse: string): void {
     console.log(`Captcha resuelto: ${captchaResponse}`);
@@ -30,23 +32,18 @@ export class BuscarVacantesComponent implements OnInit {
 
   constructor( private readonly ps:VacantesService,
               private ar: ActivatedRoute) { }
+    _getVacantes() {  
+      this.ps._getVacantes().subscribe((rest: any) => {
+      this.vacantes = rest.data;
+      console.log(this.vacantes);
+      })
+    }
 
-    _getVacantes(distritoColegio:string){
-      const param ='?distritoColegio' + distritoColegio;
+    ngOnInit(): void {
+      this._getVacantes();
+    }
   
-
-     this.ps._getVacantes(param).subscribe((rest: any)=>{
-       this.vacantes=rest.data;
-       console.log(this.vacantes);
-     })
-  }
-
-  ngOnInit(): void {
-  this.ar.params.subscribe((params:Params)=>{
-  if(params.distritoColegio){
-  this._getVacantes(params.distritoColegio);
-  }
-   })
-
-   }
  }
+
+ 
+
